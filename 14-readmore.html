@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>read more</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            padding: 25px;
+            font-size: 1.3rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 500px;
+            background: #F1F1F1;
+        }
+
+        #more {
+            display: none;
+        }
+
+        #mybtn {
+            background: #F1F1F1;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        #mybtn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span id="dots">...</span> <span id="more">Incidunt
+                voluptatibus maiores aperiam doloribus explicabo itaque dicta repudiandae delectus similique nostrum?
+                Repudiandae veniam a delectus odit libero quas, itaque sed alias!</span> </p><br>
+        <button onclick="myfunction()" id="mybtn">read more</button>
+    </div>
+    <script>
+        let dots = document.getElementById("dots");
+        let more = document.getElementById("more");
+        let btn = document.getElementById("mybtn");
+
+        function myfunction() {
+            if (dots.style.display=="none") {
+dots.style.display="inline";
+btn.innerText="read more";
+more.style.display="none";
+
+            } else {
+dots.style.display="none";
+btn.innerText="read less";
+more.style.display="inline-block";
+            }
+        }
+    </script>
+</body>
+
+</html>

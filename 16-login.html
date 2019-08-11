@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <style>
+    .container{
+        margin: 0 auto;
+        padding: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.4rem;
+        background: #f1f1f1;
+        max-width: 500px;
+    }
+    input[type=button]{
+        outline: none;
+        border: none;
+        padding: 10px;
+margin: 10px 0;
+    }
+    input[type=button]:hover{
+        background: grey;
+        cursor: pointer;
+        color: white;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="username">username:</label><br>
+        <input type="text" id="username"><br>
+        <label for="pws">please enter ur password:</label><br>
+        <input type="password" id="pws"><br>
+        <input type="button" value="login" onclick="myfunction()">
+        <p id="demo"></p>
+    </div>
+    <script>
+    let username=document.getElementById("username");
+    let pws=document.getElementById("pws");
+    let para=document.getElementById("demo");
+
+    function myfunction(){
+        para.value="";
+        if (username.value.toLowerCase()=="taniyahaqiqi" && pws.value=="123") {
+              para.innerText="welcome!"
+        } else {
+           para.innerText="you are not supposed to be here! get out-_-"
+        }
+    }
+    
+    </script>
+</body>
+</html>
